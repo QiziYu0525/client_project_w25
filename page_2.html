@@ -4,28 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Page 2</title>
 </head>
 
 <body>
-
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
-        <a href="">Skip to Main Content</a>
+        <img id="StudySpacelogo" src="images/study-spaces-banner-white.png" alt="study spaceslogo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="page_1.html">Food Pantry</a></li>
-                <li><a href="page_2.html">Study Spaces</a></li>
+                <li><a class="active" href="page_2.html">Study Spaces</a></li>
                 <li><a href="page_3.html">MSI Advising Resource Site</a></li>
             </ul>
         </nav>
-        <h1>STUDY SPACES</h1>
-        <img src="images/study-spaces-banner-white.png" alt="study spaceslogo" width="400">
-        <a href="https://studyspaces.umich.edu/reserve-study-space/">How to Reserve Study Space</a>
-
     </header>
-    <main>
-        <div>
+
+    <main id="main">
+        <div id = "study-space">
+            <h1>STUDY SPACES</h1>
+            <a id="reserve-study-space" href="https://studyspaces.umich.edu/reserve-study-space/">How to Reserve Study
+                Space</a>
             <p>
                 Study Spaces at U-M is a tool designed to help you find and reserve designated study spaces, computer
                 stations, a space for you to take a remote class, or just a dedicated quiet touchdown spot between
@@ -46,43 +48,46 @@
                 bookable spaces.
         </div>
 
-        <div>
-            <h2>Explore what’s available and where</h2>
-            <a href="https://umich-cc.libcal.com/">
-                <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/central-campus.jpg"
-                    alt="central campus" width="200">
-            </a>
-            <p>Central Campus</p>
-            <a href="https://umich-nc.libcal.com/">
-                <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/north-campus.jpg"
-                    alt="north-campus" width="200">
-            </a>
-            <p>North Campus</p>
-            <a href="https://umich.libcal.com/">
-                <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/library.jpg" alt="north-campus"
-                    width="200">
-            </a>
-            <p>U-M Library</p>
-            <a href="https://umich-cc.libcal.com/reserve/dc">
-                <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/detroit-center.jpg"
-                    alt="detroit_center" width="200">
-            </a>
-            <p>Detroit Center</p>
+        <h2>Explore what’s available and where</h2>
+        <div id="explore">
+            <div>
+                <a href="https://umich-cc.libcal.com/">
+                    <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/central-campus.jpg"
+                        alt="central campus" width="200">
+                </a>
+                <p>Central Campus</p>
+            </div>
+            <div>
+                <a href="https://umich-nc.libcal.com/">
+                    <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/north-campus.jpg"
+                        alt="north-campus" width="200">
+                </a>
+                <p>North Campus</p>
+            </div>
+            <div>
+                <a href="https://umich.libcal.com/">
+                    <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/library.jpg"
+                        alt="north-campus" width="200">
+                </a>
+                <p>U-M Library</p>
+            </div>
+            <div>
+                <a href="https://umich-cc.libcal.com/reserve/dc">
+                    <img src="https://studyspaces.umich.edu/themes/bootstrap_umich/images/detroit-center.jpg"
+                        alt="detroit_center" width="200">
+                </a>
+                <p>Detroit Center</p>
+            </div>
         </div>
 
-        <div>
-            <p>See How to Reserve Study Space for reservation instructions.</p>
-        </div>
-
-        <div>
-            <p>NOTE: This site lists study spaces available to the U-M student community at large. Students may have
+        <div id="note">
+            <p id="note">NOTE: This site lists study spaces available to the U-M student community at large. Students may have
                 access to other spaces directly through their schools, colleges, and departments.</p>
         </div>
     </main>
     <footer>
-        <p>MSI Academic Advising | <a
-                href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
-                Advising </a></p>
+        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
+                Advising 2025 </a></p>
     </footer>
 
 </body>
