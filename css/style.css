@@ -207,17 +207,31 @@ img#MBClogo {
     max-height: 40px;
     margin: 45px auto 20px auto;
 }
+
+div#mission img {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    display: block;
+    box-sizing: border-box;
+}
+
 div#makeappointment {
     font-weight: bold;
     text-align: center;
-    margin: 20px;
-    color: white;
-    padding: 10px 20px;
-    display: inline-block;
-    background-color: #00B2A9;
+    margin: 20px auto;
+    color: #00274C;
+    background-color: #5ad0ca;
     border-radius: 10px;
-    cursor: pointer;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
+
 div#provide {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -229,6 +243,7 @@ div#provide {
 
 div#provide img {
     width: 100%;
+    max-width: 300px;
     padding: 20px;
     margin: 20px auto;
     display: block;
@@ -375,3 +390,18 @@ div#msi-advising img {
     display: block;
     box-sizing: border-box;
 }
+
+div#quick-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+div#quick-links h3 {
+    text-align: center;
+}
+    
