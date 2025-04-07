@@ -24,7 +24,7 @@
     </header>
 
     <main id="main">
-        <div id = "study-space">
+        <div id="study-space">
             <h1>STUDY SPACES</h1>
             <a id="reserve-study-space" href="https://studyspaces.umich.edu/reserve-study-space/">How to Reserve Study
                 Space</a>
@@ -81,15 +81,58 @@
         </div>
 
         <div id="note">
-            <p id="note">NOTE: This site lists study spaces available to the U-M student community at large. Students may have
+            <p id="note">NOTE: This site lists study spaces available to the U-M student community at large. Students
+                may have
                 access to other spaces directly through their schools, colleges, and departments.</p>
         </div>
     </main>
     <footer>
-        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
-                Advising 2025 </a></p>
+        <p><a href="https://its.umich.edu/">Information and Technology Services</a> <span id="year"></span><br>How can we
+            help you?
+            <br>To get help or offer feedback, contact the ITS Service Center.<br> Chat: <a
+                href="https://chatsupport.it.umich.edu/">chatsupport.it.umich.edu </a><br>Call:<a
+                href="facetime:17347644357">734-764-HELP (764-4357)</a>
+        </p>
+        <fieldset>
+            <legend>Email subscriptions</legend>
+            <div id="check">
+                <label>
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    Check to toggle the email field.
+                </label>
+            </div>
+
+            <div id="emailDiv">
+                <label>
+                    Email Address:
+                    <input type="text" name="email" id="email">
+                </label>
+            </div>
+
+            <input type="submit" value="submit">
+        </fieldset>
     </footer>
 
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    document.getElementById("subscribe").addEventListener("click", function () {
+        console.log('this works');
+        if (document.getElementById("subscribe").checked == true) {
+            console.log("item is checked!");
+            document.getElementById("emailDiv").style.display = "block";
+        }
+        else { document.getElementById("emailDiv").style.display = "none"; }
+        document.querySelector("input[type='submit']").addEventListener("click", function (event) {
+            event.preventDefault();
+            const emailInput = document.getElementById("email").value;
+            if (emailInput) {
+                alert("Successfully subscribed!");
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+    })
+</script>
 
 </html>

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
         <img id="logo" src="images/UMSI_signature_vertical_informal_solidblue.jpg" width="100" alt="UMSI Logo">
         <nav>
@@ -56,16 +56,25 @@
                         Who do I contact?</a></li>
             </ul>
         </div>
+        <h2>Quick Links</h2>
         <div id="quick-links">
-            <h2>Quick Links</h2>
-            <h3>UMSI Course Catalog</h3>
-            <a href="https://docs.google.com/spreadsheets/d/1FiG9NnyZGJdMLeuY7ZIiRMbN4LPDrx_8ZUlyRMaAT_Q/edit?gid=0#gid=0" target="_blank">UMSI Course Catalog</a>
-            <h3>MSI Student Handbook</h3>
-            <a href="https://docs.google.com/document/d/1uTTCKPKueWEL8pGP2_IEErSpgcSCsUWjRkYtqoOb6K4/edit?tab=t.0" target="_blank">MSI Student Handbook</a>
-            <h3>UMSI Faculty Office Hours</h3>
-            <a href="https://docs.google.com/spreadsheets/d/1pLBDFSKJiF7UMmcaVNlPYmHfUylCl5Kr1szcMtKDOMA/edit?gid=1487455748#gid=1487455748" target="_blank">UMSI Faculty Office Hours</a>
+            <div>
+                <!-- <h3>UMSI Course Catalog</h3> -->
+                <a href="https://docs.google.com/spreadsheets/d/1FiG9NnyZGJdMLeuY7ZIiRMbN4LPDrx_8ZUlyRMaAT_Q/edit?gid=0#gid=0"
+                    target="_blank">UMSI Course Catalog</a>
+            </div>
+            <div>
+                <!-- <h3>MSI Student Handbook</h3> -->
+                <a href="https://docs.google.com/document/d/1uTTCKPKueWEL8pGP2_IEErSpgcSCsUWjRkYtqoOb6K4/edit?tab=t.0"
+                    target="_blank">MSI Student Handbook</a>
+            </div>
+            <div>
+                <!-- <h3>UMSI Faculty Office Hours</h3> -->
+                <a href="https://docs.google.com/spreadsheets/d/1pLBDFSKJiF7UMmcaVNlPYmHfUylCl5Kr1szcMtKDOMA/edit?gid=1487455748#gid=1487455748"
+                    target="_blank">UMSI Faculty Office Hours</a>
+            </div>
         </div>
-        <div>
+        <div id="degree">
             <ul>
                 <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/msi-degree-requirements?authuser=0">Degree
                         Requirements</a></li>
@@ -80,9 +89,47 @@
     </main>
     <footer>
         <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
-                Advising 2025 </a></p>
+                Advising</a> <span id="year"></span> | <a
+                href="mailto:umsi.advising.msi@umich.edu" title="Email UMSI Academic Advising">umsi.advising.msi@umich.edu</a></p>
+                <fieldset>
+                    <legend>Email subscriptions</legend>
+                    <div id="check">
+                        <label>
+                            <input type="checkbox" name="subscribe" id="subscribe">
+                            Check to toggle the email field.
+                        </label>
+                    </div>
+        
+                    <div id="emailDiv">
+                        <label>
+                            Email Address:
+                            <input type="text" name="email" id="email">
+                        </label>
+                    </div>
+        
+                    <input type="submit" value="submit">
+                </fieldset>
     </footer>
-
 </body>
+<<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    document.getElementById("subscribe").addEventListener("click", function () {
+        console.log('this works');
+        if (document.getElementById("subscribe").checked == true) {
+            console.log("item is checked!");
+            document.getElementById("emailDiv").style.display = "block";
+        }
+        else { document.getElementById("emailDiv").style.display = "none"; }
+        document.querySelector("input[type='submit']").addEventListener("click", function (event) {
+            event.preventDefault();
+            const emailInput = document.getElementById("email").value;
+            if (emailInput) {
+                alert("Successfully subscribed!");
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+    })
+</script>
 
 </html>
